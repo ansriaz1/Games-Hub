@@ -1,0 +1,98 @@
+/* General Body & Header */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0; padding: 0;
+  text-align: center;
+  color: #fff;
+  background: linear-gradient(-45deg, #ff9a9e, #fad0c4, #a18cd1, #fbc2eb);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+}
+
+@keyframes gradientBG {
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
+}
+
+header {
+  padding: 20px;
+  text-shadow: 2px 2px #333;
+}
+
+h1 { font-size: 2em; }
+
+/* Buttons */
+.game-button {
+  background: #ff6a00;
+  margin: 15px;
+  padding: 20px 30px;
+  font-size: 1.3em;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: transform 0.2s, background 0.2s;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+.game-button:hover {
+  transform: scale(1.1) rotate(-2deg);
+  background: #ff3a00;
+}
+
+/* Game container */
+#game-container {
+  margin-top: 30px;
+  min-height: 350px;
+  padding: 20px;
+  border-radius: 15px;
+  background: rgba(255,255,255,0.2);
+  backdrop-filter: blur(5px);
+  animation: fadeIn 1s ease;
+}
+
+@keyframes fadeIn {
+  from {opacity:0; transform:translateY(20px);}
+  to {opacity:1; transform:translateY(0);}
+}
+
+/* Coin */
+#coin {
+  font-size: 6em;
+  display: inline-block;
+  margin: 20px auto;
+  text-shadow: 2px 2px 10px #ffd700, 0 0 20px #ffff00;
+  transition: transform 2s;
+}
+
+/* Dice in Ludo */
+#ludo-board {
+  background: #eee;
+  border: 2px solid #333;
+  margin: 20px auto;
+  border-radius: 15px;
+  position: relative;
+  width: 300px;
+  height: 300px;
+}
+
+/* Catch the Dot */
+#game-area {
+  margin: 20px auto;
+  border: 2px solid #333;
+  border-radius: 15px;
+  width: 300px;
+  height: 400px;
+  position: relative;
+  background: #fff;
+}
+
+/* Confetti animation */
+.confetti {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: #fcd34d;
+  animation: fall 2s linear forwards;
+}
+@keyframes fall {
+  to { transform: translateY(400px) rotate(360deg); opacity:0;}
+  }
